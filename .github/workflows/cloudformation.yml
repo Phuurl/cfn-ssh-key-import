@@ -10,4 +10,4 @@ jobs:
       - name: Lint CloudFormation templates
         uses: scottbrenner/cfn-lint-action@master
         with:
-          args: "--include-checks I --ignore-checks I3042 -t **/*.yml"
+          args: "--include-checks I -t template.yaml example/template.yaml"
