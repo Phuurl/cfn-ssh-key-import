@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description:  Example template using the public key import custom resource
+
+Parameters:
+  SshKeyImportFunc:
+    Description: Export name of SSH key custom resource Lambda function
+    Type: String
+    Default: 'SshKeyImportFunc'
+
+Resources:
+  KeyImport:
+    Type: Custom::Ec2KeyPair
+    Properties:
+      ServiceToken:
+        Fn::ImportValue: !Ref SshKeyImportFunc
+      KeyName: 'desired-name-of-key'
+      KeyMaterial: 'ssh-rsa xxxxxxxxxx name@host'
