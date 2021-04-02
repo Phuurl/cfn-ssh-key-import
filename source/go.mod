@@ -3,6 +3,6 @@ require (
 	github.com/aws/aws-sdk-go v1.36.15
 )
 
-module ssh-public-key-import
+module github.com/Phuurl/cfn-ssh-key-import
 
 go 1.15
