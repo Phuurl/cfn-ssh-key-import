@@ -14,7 +14,6 @@ Resources:
       CodeUri: source/
       Handler: source
       Runtime: go1.x
-      Tracing: Active
       Policies:
         - Version: 2012-10-17
           Statement:
